@@ -1,7 +1,16 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<!-- 这里是放css,不然js有可能在全局css前面 -->
+@section Style{
+
+}
+<!-- 这里是放js,不然js有可能在全局js前面 -->
+@section Scripts{
+    <script src="~/Areas/Admin/Scripts/HomeIndex.js"></script>
 }
 
-<h2>Index</h2>
+<div>Index</div>
 

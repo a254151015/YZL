@@ -26,6 +26,11 @@ namespace YZL
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //初始化angularJs
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/angular-1.5.8/angular.min.js",
+                "~/Scripts/angular-1.5.8/angular-route.min.js",
+                "~/Scripts/angular-1.5.8/angular-cookies.js"));
         }
     }
 }
