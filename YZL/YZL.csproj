@@ -3020,6 +3020,10 @@
       <Project>{a528ab87-ac09-4047-9dba-af023a1f0ca7}</Project>
       <Name>YZL.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\YZL.BaseController\YZL.BaseController.csproj">
+      <Project>{731a514f-8a3e-48bb-91e9-e76c87caa956}</Project>
+      <Name>YZL.BaseController</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
