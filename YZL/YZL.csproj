@@ -166,6 +166,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Mobile\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Mobile\MobileAreaRegistration.cs" />
+    <Compile Include="Areas\Web\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Web\WebAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2699,6 +2703,12 @@
     <Content Include="Scripts\Angular\angular-1.5.8\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\Angular\angular-1.5.8\i18n\angular-locale_zu.js" />
     <Content Include="Scripts\Angular\angular-1.5.8\version.txt" />
+    <Content Include="Scripts\boostrap\bootstrap-table-locale-all.js" />
+    <Content Include="Scripts\boostrap\bootstrap-table-locale-all.min.js" />
+    <Content Include="Scripts\boostrap\bootstrap-table.css" />
+    <Content Include="Scripts\boostrap\bootstrap-table.js" />
+    <Content Include="Scripts\boostrap\bootstrap-table.min.css" />
+    <Content Include="Scripts\boostrap\bootstrap-table.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
@@ -2966,6 +2976,14 @@
     <Content Include="Scripts\Angular\angular-1.5.8\errors.json" />
     <Content Include="Scripts\Angular\angular-1.5.8\version.json" />
     <Content Include="Areas\Admin\Views\Home\Manager.cshtml" />
+    <Content Include="Areas\Web\Views\web.config" />
+    <Content Include="Areas\Web\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Web\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Web\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Mobile\Views\web.config" />
+    <Content Include="Areas\Mobile\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Mobile\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Mobile\Views\Home\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -3010,6 +3028,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Mobile\Models\" />
+    <Folder Include="Areas\Web\Models\" />
     <Folder Include="Scripts\Angular\angular-1.5.8\i18n\ngLocale\" />
   </ItemGroup>
   <ItemGroup>
