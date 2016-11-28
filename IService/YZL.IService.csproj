@@ -7,8 +7,8 @@
     <ProjectGuid>{FC275AC5-46FD-4827-9579-FC85319CB92E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IService</RootNamespace>
-    <AssemblyName>IService</AssemblyName>
+    <RootNamespace>YZL.IService</RootNamespace>
+    <AssemblyName>YZL.IService</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IService.cs" />
+    <Compile Include="TestService\ITestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

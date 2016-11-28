@@ -9,8 +9,13 @@
 }*@
 <!-- 这里是放js,不然js有可能在全局js前面 -->
 @section Scripts{
+    <script src="~/Scripts/Angular/angular-1.5.8/angular.min.js"></script>
+    <script src="~/Scripts/Angular/angular-1.5.8/angular-route.min.js"></script>
     <script src="~/Areas/Admin/Scripts/HomeIndex.js"></script>
 }
 
-<div>Index</div>
+<div ng-app="Test" ng-controller="TestController">
+    @*<div ng-view=""></div>*@
+    <ng-view></ng-view>
+</div>
 
