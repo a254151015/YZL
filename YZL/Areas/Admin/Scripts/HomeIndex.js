@@ -1,8 +1,21 @@
-﻿/// <reference path="../Views/Home/Index.html" />
-//$(function () {
-
-//    alert("aa");
-//});
+﻿app.directive('rnStepper', function () {
+    return {
+        restrict: 'AE',
+        scope: {},
+        template: '<button ng-click="decrement()">-</button>' +
+                  '<div>{{value}}</div>' +
+                  '<button ng-click="increment()">+</button>',
+        link: function (scope, iElement, iAttrs) {
+            scope.value = 0;
+            scope.increment = function () {
+                scope.value++;
+            };
+            scope.decrement = function () {
+                scope.value--;
+            };
+        }
+    };
+});
 app.controller("TestController", ["$scope", "$location", function ($scope, $location) {
     $scope.goToIndex2 = function () {
         $location.path("/SY");
@@ -52,8 +65,14 @@ app.controller("TestController", ["$scope", "$location", function ($scope, $loca
 
     $(function () {
         query();
+        $scope.rating = 42;
+        $scope.minRating = 40;
+        $scope.maxRating = 50;
     });
+
+    
 }]);
+
 
 
 app.config(['$routeProvider', function ($routeProvider) {
