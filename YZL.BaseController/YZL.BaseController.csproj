@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AreaRegistrationData.cs" />
     <Compile Include="BaseAdminController\BaseAdminController.cs" />
     <Compile Include="BaseAdminController\BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

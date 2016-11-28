@@ -4,18 +4,21 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 <!-- 这里是放css,不然js有可能在全局css前面 -->
-@*@section Style{
-
-}*@
+@section Style{
+    <link href="~/Scripts/boostrap/bootstrap-table.css" rel="stylesheet" />
+}
 <!-- 这里是放js,不然js有可能在全局js前面 -->
 @section Scripts{
     <script src="~/Scripts/Angular/angular-1.5.8/angular.min.js"></script>
     <script src="~/Scripts/Angular/angular-1.5.8/angular-route.min.js"></script>
-    <script src="~/Areas/Admin/Scripts/HomeIndex.js"></script>
+    <script src="~/Scripts/Angular/AngularGlobal.js"></script>
+    <script src="~/Scripts/boostrap/bootstrap-table.js"></script>
+    <script src="~/Areas/Admin/Scripts/HomeIndex.js?v=2016112801"></script>
 }
 
 <div ng-app="Test" ng-controller="TestController">
     @*<div ng-view=""></div>*@
     <ng-view></ng-view>
+    <table id="list"></table>
 </div>
 
