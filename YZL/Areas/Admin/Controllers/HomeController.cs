@@ -55,7 +55,7 @@ namespace YZL.Areas.Admin.Controllers
 
         public ActionResult Manager()
         {
-
+            _ITestService.AddStudents();
             return View();
         }
 	}

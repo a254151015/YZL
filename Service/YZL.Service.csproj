@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,12 +46,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBase.cs" />
     <Compile Include="Test\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IService\YZL.IService.csproj">
       <Project>{fc275ac5-46fd-4827-9579-fc85319cb92e}</Project>
       <Name>YZL.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YZL.Code\YZL.Code.csproj">
+      <Project>{194ddebe-e3ee-42ef-bf42-404b283c4b47}</Project>
+      <Name>YZL.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YZL.DatabaseEntity\YZL.DatabaseEntity.csproj">
+      <Project>{c8fd3526-a107-47ec-b1a1-08f0a45ec86f}</Project>
+      <Name>YZL.DatabaseEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YZL.Model\YZL.Model.csproj">
+      <Project>{b6c01a77-aa44-4927-90fa-6408dcb8c372}</Project>
+      <Name>YZL.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace YZL.BaseController.BaseAdminController
 {
@@ -12,5 +13,12 @@ namespace YZL.BaseController.BaseAdminController
 
             return "";
         } }
+        /// <summary>验证是否登录
+        /// </summary>
+        /// <param name="filterContext"></param>
+        protected override void OnAuthorization(AuthorizationContext filterContext)
+        { 
+             
+        }
     }
 }
