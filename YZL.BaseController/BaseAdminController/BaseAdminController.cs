@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using YZL.Code;
 
 namespace YZL.BaseController.BaseAdminController
 {
@@ -17,8 +18,15 @@ namespace YZL.BaseController.BaseAdminController
         /// </summary>
         /// <param name="filterContext"></param>
         protected override void OnAuthorization(AuthorizationContext filterContext)
-        { 
-             
+        {
+            if (WebHelper.IsAjax())
+            {
+
+            }
+            else
+            {
+
+            }
         }
     }
 }

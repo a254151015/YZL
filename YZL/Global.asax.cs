@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using YZL.App_Start;
+using YZL.Code;
 
 namespace YZL
 {
@@ -23,6 +24,8 @@ namespace YZL
             
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             new AutoFacContainer();
+            // 在应用程序启动时运行的代码
+            Log.StartLog();
             //DependencyResolver.SetResolver(new AutoFacContainer());
             //ObjectContainer.ApplicationStart(new AutoFacContainer());
         }

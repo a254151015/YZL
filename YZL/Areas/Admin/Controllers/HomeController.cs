@@ -55,9 +55,12 @@ namespace YZL.Areas.Admin.Controllers
 
         public ActionResult Manager()
         {
-            _ITestService.AddStudents();
+            //_ITestService.AddStudents();
+            //_ITestService.TestLog4j();
             return View();
         }
+
+        
 	}
     public class Test
     {

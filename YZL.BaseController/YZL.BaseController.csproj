@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\mvc5.1.2\System.Web.Mvc.dll</HintPath>
@@ -48,6 +49,16 @@
     <Compile Include="BaseAdminController\BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RewriteRout\MyAreaRegistration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IService\YZL.IService.csproj">
+      <Project>{fc275ac5-46fd-4827-9579-fc85319cb92e}</Project>
+      <Name>YZL.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YZL.Code\YZL.Code.csproj">
+      <Project>{194ddebe-e3ee-42ef-bf42-404b283c4b47}</Project>
+      <Name>YZL.Code</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
