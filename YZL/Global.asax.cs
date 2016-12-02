@@ -1,5 +1,5 @@
 ﻿
-using IService;
+using YZL.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +26,8 @@ namespace YZL
             new AutoFacContainer();
             // 在应用程序启动时运行的代码
             Log.StartLog();
+            //QuartzHelper.Start();
+            //TopshelfHelper.StartTopshelf();
             //DependencyResolver.SetResolver(new AutoFacContainer());
             //ObjectContainer.ApplicationStart(new AutoFacContainer());
         }

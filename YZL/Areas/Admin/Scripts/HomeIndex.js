@@ -16,6 +16,7 @@
         }
     };
 });
+
 app.controller("TestController", ["$scope", "$location", function ($scope, $location) {
     $scope.goToIndex2 = function () {
         $location.path("/SY");
@@ -27,9 +28,9 @@ app.controller("TestController", ["$scope", "$location", function ($scope, $loca
             dataType: "json",
             striped: true,	 //使表格带有条纹
             pagination: true,	//在表格底部显示分页工具栏
-            pageSize: 4,
+            pageSize: 10,
             pageNumber: 1,
-            pageList: [10, 20, 50, 100, 200, 500],
+            pageList: [10, 25, 50, 100],//可供选择的每页的行数（*）   
             idField: "Id",  //标识哪个字段为id主键
             showToggle: false,   //名片格式
             cardView: false,//设置为True时显示名片（card）布局
@@ -39,7 +40,14 @@ app.controller("TestController", ["$scope", "$location", function ($scope, $loca
             search: false,//是否显示右上角的搜索框
             clickToSelect: true,//点击行即可选中单选/复选框
             sidePagination: "server",//表格分页的位置
-            queryParams: {pageSize : 0,pageNumber : 10}, //参数
+            queryParams: function(params) {
+                var subcompany = $('#subcompany option:selected').val();
+                var name = $('#name').val();
+                return {
+                    pageNumber: params.pageNumber,
+                    pageSize: params.pageSize
+                };
+            }, //参数
             queryParamsType: "", //参数格式,发送标准的RESTFul类型的参数请求
             paginationLoop: true,
             toolbar: '#toolbar',
@@ -61,6 +69,13 @@ app.controller("TestController", ["$scope", "$location", function ($scope, $loca
             }
         });
         flag = false;
+    }
+
+    function QueryQueryParams(params) {
+        return {
+            pageNumber: params.offset + 1,
+            pageSize: params.limit
+        };
     }
 
     $(function () {

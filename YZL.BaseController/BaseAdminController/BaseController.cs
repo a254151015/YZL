@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using YZL.Code;
 
 
+
 namespace YZL.BaseController
 {
     public abstract class BaseController : Controller
@@ -84,6 +85,7 @@ namespace YZL.BaseController
             }
             else
             {
+
             }
 
 
@@ -131,7 +133,7 @@ namespace YZL.BaseController
             if (filterContext.IsChildAction)
                 return;
 
-            List<IService.IService> services = filterContext.HttpContext.Session["_serviceInstace"] as List<IService.IService>;
+            List<IServices.IService> services = filterContext.HttpContext.Session["_serviceInstace"] as List<IServices.IService>;
             if (services != null)
             {
                 foreach (var service in services)

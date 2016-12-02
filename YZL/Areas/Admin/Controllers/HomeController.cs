@@ -1,10 +1,11 @@
-﻿using IService;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using YZL.BaseController.BaseAdminController;
+using YZL.IServices;
 
 
 namespace YZL.Areas.Admin.Controllers
@@ -12,7 +13,6 @@ namespace YZL.Areas.Admin.Controllers
     public class HomeController : BaseAdminController//  Controller
     {
         private ITestService _ITestService;
-
         public HomeController(ITestService iTestService)
         {
             _ITestService = iTestService;
@@ -23,12 +23,12 @@ namespace YZL.Areas.Admin.Controllers
         public ActionResult Index()
         {
             //var userName = CurrentLoginUser;
-            string str = _ITestService.GetStr();
+            //string str = _ITestService.GetStr();
 
             return View();
         }
 
-        public JsonResult List(int pageSize, int pageNumber)
+        public JsonResult List(int pageSize , int pageNumber)
         {
             IList<Test> tList = new List<Test>();
             tList.Add(new Test { Id = 1, Name = "测试1" });
@@ -47,7 +47,19 @@ namespace YZL.Areas.Admin.Controllers
             tList.Add(new Test { Id = 14, Name = "测试14" });
             tList.Add(new Test { Id = 15, Name = "测试15" });
             tList.Add(new Test { Id = 16, Name = "测试16" });
-            return Json(new {
+            if (pageNumber >= 1)
+            {
+                pageNumber = pageNumber - 1;
+            }
+            else
+            {
+                pageNumber = 0;
+            }
+
+
+            tList = tList.OrderBy(t => t.Id).Skip(pageNumber * pageSize).Take(pageSize).ToList();
+            return Json(new
+            {
                 total = 16,
                 rows = tList
             });
@@ -55,7 +67,9 @@ namespace YZL.Areas.Admin.Controllers
 
         public ActionResult Manager()
         {
-            //_ITestService.AddStudents();
+            _ITestService.AddStudents();
+            _ITestService.QueryStudents();
+            _ITestService.UpdateStudents();
             //_ITestService.TestLog4j();
             return View();
         }

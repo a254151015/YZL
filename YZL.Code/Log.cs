@@ -12,7 +12,8 @@ namespace YZL.Code
 
         public static void StartLog()
         {
-            log4net.Config.DOMConfigurator.Configure();
+            //log4net.Config.DOMConfigurator.Configure();
+            log4net.Config.XmlConfigurator.Configure();
         }
 
         /// <summary>错误日志
@@ -22,6 +23,11 @@ namespace YZL.Code
         public static void Error(string errorMsg, Exception exception)
         {
             log.Error(errorMsg, exception);
+        }
+
+        public static void Error(string errorMsg)
+        {
+            log.Error(errorMsg);
         }
     }
 }

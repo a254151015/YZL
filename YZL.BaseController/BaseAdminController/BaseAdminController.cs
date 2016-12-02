@@ -19,14 +19,14 @@ namespace YZL.BaseController.BaseAdminController
         /// <param name="filterContext"></param>
         protected override void OnAuthorization(AuthorizationContext filterContext)
         {
-            if (WebHelper.IsAjax())
-            {
+            //if (WebHelper.IsAjax())
+            //{
 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-            }
+            //}
         }
     }
 }

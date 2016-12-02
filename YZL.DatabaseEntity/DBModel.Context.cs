@@ -14,10 +14,10 @@ namespace YZL.DatabaseEntity
     using System.Data.Entity.Infrastructure;
     using YZL.Model;
     
-    public partial class DBModel : DbContext
+    public partial class DBModelContainer : DbContext
     {
-        public DBModel()
-            : base("name=DBModel")
+        public DBModelContainer()
+            : base("name=DBModelContainer")
         {
         }
     
@@ -27,5 +27,6 @@ namespace YZL.DatabaseEntity
         }
     
         public virtual DbSet<Students> Students { get; set; }
+        public virtual DbSet<SClass> SClass { get; set; }
     }
 }

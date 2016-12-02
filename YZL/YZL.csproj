@@ -48,6 +48,10 @@
     <Reference Include="Autofac.Integration.Mvc">
       <HintPath>..\packages\Autofac\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Common.Logging, Version=2.1.2.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Common.Logging.2.1.2\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -101,6 +105,10 @@
     <Reference Include="Newtonsoft.Json">
       <Private>True</Private>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Topshelf, Version=3.0.105.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Topshelf\Topshelf.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -188,6 +196,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="quartz_jobs.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\Angular\angular-1.5.8\angular-animate.js" />
     <Content Include="Scripts\Angular\angular-1.5.8\angular-animate.min.js" />
     <Content Include="Scripts\Angular\angular-1.5.8\angular-aria.js" />
@@ -2707,6 +2718,7 @@
     <Content Include="Scripts\Angular\AngularGlobal.js" />
     <Content Include="Scripts\boostrap\bootstrap-table-locale-all.js" />
     <Content Include="Scripts\boostrap\bootstrap-table-locale-all.min.js" />
+    <Content Include="Scripts\boostrap\bootstrap-table-zh-CN.js" />
     <Content Include="Scripts\boostrap\bootstrap-table.css" />
     <Content Include="Scripts\boostrap\bootstrap-table.js" />
     <Content Include="Scripts\boostrap\bootstrap-table.min.css" />
